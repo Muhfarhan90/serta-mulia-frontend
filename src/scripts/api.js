@@ -1,5 +1,5 @@
 // TODO: Silakan sesuaikan BASE URL dari endpoint Anda
-const BASE_URL = 'YOUR BASE URL';
+const BASE_URL = "0.0.0.0:3000";
 
 const ENDPOINT = {
   predict: `${BASE_URL}/predict`,
@@ -8,9 +8,9 @@ const ENDPOINT = {
 class PredictAPI {
   static async predict(data) {
     const response = await fetch(ENDPOINT.predict, {
-      method: 'POST',
+      method: "POST",
       body: data,
-      redirect: 'follow',
+      redirect: "follow",
     });
 
     const json = await response.json();
